@@ -1,8 +1,7 @@
 # Custom-Search-Engine
-A Streamlit-based Q&amp;A chatbot like a Search engine that uses LangChain, Groq LLM and Chroma embeddings to answer questions from uploaded PDFs, Wikipedia, Arxiv, and custom search queries, while maintaining persistent chat history.
+A Streamlit-based Q&A chatbot that acts like a custom search engine. It leverages LangChain, Groq LLM, and multiple knowledge sources to provide accurate answers in real time.
 
 ## Features
-
 - Conversational interface with persistent chat history.
 - Integrates multiple sources for information retrieval:
   - **Arxiv**: academic papers
@@ -17,26 +16,21 @@ A Streamlit-based Q&amp;A chatbot like a Search engine that uses LangChain, Groq
 ## Installation
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/your-username/Custom_Search_Engine.git
 cd Custom_Search_Engine
 
 2. Create a virtual environment:
-
 python -m venv .venv
 .venv\Scripts\activate   # Windows
 # source .venv/bin/activate   # Mac/Linux
 
 3. Install requirements:
-
 pip install -r requirements.txt
 
 4. Create a .env file with your API keys:
-
 GROQ_API_KEY=your_groq_api_key
 
 5. Run the Streamlit app:
-
-streamlit run sample_rag_app.py
+streamlit run app.py
 
