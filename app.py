@@ -14,7 +14,10 @@ load_dotenv()
 
 st.sidebar.title('Settings')
 groq_api_key = st.sidebar.text_input('Enter your Groq API key:',type='password')
-
+if not groq_api_key:
+    st.info('Please add your Groq API key')
+    st.stop()
+    
 arxiv_wrapper = ArxivAPIWrapper(
     top_k_results = 1,
     ARXIV_MAX_QUERY_LENGTH = 300,
@@ -58,4 +61,5 @@ if prompt := st.chat_input("Your question:"):
         st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts = False)
         response = agents.run(st.session_state.messages, callbacks=[st_cb])
         st.session_state.messages.append({"role": "assistant", "content": response})
+
         st.write(response)
