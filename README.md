@@ -1,3 +1,13 @@
+---
+license: apache-2.0
+title: Custom Search Engine
+sdk: streamlit
+emoji: 😻
+colorFrom: blue
+colorTo: blue
+short_description: Answer questions from Wikipedia, Arxiv, and Search Engine
+---
+
 # Custom-Search-Engine
 A Streamlit-based Q&A chatbot that acts like a custom search engine. It leverages LangChain, Groq LLM, and multiple knowledge sources to provide accurate answers in real time.
 
