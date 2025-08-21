@@ -1,4 +1,5 @@
 langchain
+langchain-groq
 python-dotenv
 ipykernel
 langchain-community
@@ -17,8 +18,6 @@ langchain_chroma
 duckdb
 pandas
 openai
-langchain-groq
-pymupdf
 mysql-connector-python
 SQLAlchemy
 validators==0.28.1
