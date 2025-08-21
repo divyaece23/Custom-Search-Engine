@@ -28,11 +28,7 @@ for msg in st.session_state.messages:
         st.write(msg["content"])
 
 # DuckDuckGo Search Tool
-ddg_search_tool = Tool(
-    name="DuckDuckGo Search",
-    func=DuckDuckGoSearchResults().run,
-    description="Use this tool to search the web using DuckDuckGo."
-)
+ddg_search_tool = =DuckDuckGoSearchRun(name="DuckDuckGo Search")
 
 # Wikipedia Search Tool
 wiki_search_tool = Tool(
@@ -64,6 +60,7 @@ if prompt := st.chat_input("Your question:"):
     
     with st.chat_message("assistant"):
         st.write(response)
+
 
 
 
