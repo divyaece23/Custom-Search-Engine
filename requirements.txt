@@ -1,5 +1,4 @@
 langchain
-langchain-groq
 python-dotenv
 ipykernel
 langchain-community
@@ -18,6 +17,11 @@ langchain_chroma
 duckdb
 pandas
 openai
+langchain-groq
+duckduckgo_search==5.3.1b1
+pymupdf
+arxiv
+wikipedia
 mysql-connector-python
 SQLAlchemy
 validators==0.28.1
@@ -26,6 +30,3 @@ unstructured
 pytube
 numexpr
 huggingface_hub
-duckduckgo_search==5.3.1b1
-
-
