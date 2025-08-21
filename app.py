@@ -56,10 +56,10 @@ if prompt := st.chat_input("Your question:"):
     tools =[arxiv, wikipedia, search_eng]
 
     agents = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handle_parsing_errors=True, verbose=True)
-
+    st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts = False)
+    response = agents.run(st.session_state.messages, callbacks=[st_cb])
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    
     with st.chat_message("assistant"):
-        st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts = False)
-        response = agents.run(st.session_state.messages, callbacks=[st_cb])
-        st.session_state.messages.append({"role": "assistant", "content": response})
-
         st.write(response)
+
