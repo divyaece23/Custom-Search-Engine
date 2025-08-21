@@ -4,7 +4,7 @@
 import streamlit as st
 import os
 from langchain_groq import ChatGroq
-from langchain_community.tools import DuckDuckGoSearchResults
+from langchain_community.tools import DuckDuckGoSearchRun
 from langchain.utilities import WikipediaAPIWrapper, ArxivAPIWrapper
 from langchain.agents import initialize_agent, AgentType
 from langchain.callbacks import StreamlitCallbackHandler
@@ -60,6 +60,7 @@ if prompt := st.chat_input("Your question:"):
     
     with st.chat_message("assistant"):
         st.write(response)
+
 
 
 
